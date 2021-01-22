@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Deleting everything..."
-User.destroy_all
+
 Photo.destroy_all
-Destination.destroy_all
+
 
 puts "Seeding everything..."
 15.times do 
@@ -32,8 +32,8 @@ puts "Seeding everything..."
         description: Faker::GreekPhilosophers.quote,
         date: Faker::Date.between(from: '1965-09-23', to: '2020-01-21'),
         likes: Faker::Number.number(digits: 3),
-        # user: user,
-        # destination: destination,
+        user: user,
+        destination: destination,
     )
 end
 end 
