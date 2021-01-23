@@ -11,11 +11,17 @@ class PhotosController < ApplicationController
     end 
 
     def new
-        photo = photo.new
+        photo = Photo.new
     end
 
     def create
         photo = Photo.create(photo_params)
+        render json: photo
+    end
+
+    def destroy 
+        photo = Photo.find(params[:id])
+        photo.destroy
         render json: photo
     end
 
