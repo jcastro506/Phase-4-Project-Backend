@@ -9,22 +9,26 @@
 puts "Deleting everything..."
 
 Photo.destroy_all
+User.destroy_all
+Destination.destroy_all
 
 
 puts "Seeding everything..."
-15.times do 
+5.times do 
     user = User.create!(
         name: Faker::Name.name , 
         age: Faker::Number.number(digits: 2), 
         email: Faker::Internet.email
     )
 
-30.times do 
+
+5.times do 
     destination = Destination.create!(
         city: Faker::Address.city
     )
+
     
-20.times do 
+5.times do 
     photo = Photo.create!(
         image_url: Faker::Avatar.image,
         location: Faker::Address.city,
@@ -35,7 +39,7 @@ puts "Seeding everything..."
         user: user,
         destination: destination,
     )
-end
+end 
 end 
 end   
             
