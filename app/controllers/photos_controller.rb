@@ -27,7 +27,6 @@ class PhotosController < ApplicationController
     end
 
     def create
-        byebug
         photo = Photo.create(photo_params)
         render json: photo
     end
