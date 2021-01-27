@@ -23,6 +23,15 @@ images = ["https://images.squarespace-cdn.com/content/v1/55ee34aae4b0bf70212ada4
         "https://images.squarespace-cdn.com/content/v1/5771ac0259cc68d56daf44ee/1540437397899-ZMDSM0IAJQRS8QX0D5FP/ke17ZwdGBToddI8pDm48kBFUKT45a8pb_pY0UIHKymVZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwz3OH_aFO-YYWP7wjOFtEbUgl4LOFMIs_Z4pgzeVmQB9CYjQcFKmkUrzpFfhtB7LY/language+learning+adventure+cover+page.jpg"
     ]
 
+comments = [
+    "I loved this trip! The food, hotels, and sights were all perfect. Can't wait to go back again!",
+    "What can I say about this last month. This was one of the best trips of my life. I need to get back tomorrow!",
+    "The flight over wasn't perfect, but let me tell you, the city was the exact opposite! Would do it again in a heart beat.",
+    "Literally thinking about moving here. The most fun I've ever had on a trip. Why did it have to end!!",
+    "One of the stops on our backpacking trip. I think the pic speaks for itself!",
+    "Told all my friends about this city. Going to be coming back soon with all of them!"
+]
+
 
 puts "Seeding everything..."
 5.times do 
@@ -44,7 +53,7 @@ puts "Seeding everything..."
         image_url: images[rand(images.length)],
         location: Faker::Address.city,
         # destination.city
-        description: Faker::GreekPhilosophers.quote,
+        description: comments[rand(comments.length)],
         date: Faker::Date.between(from: '2005-09-23', to: '2020-01-21'),
         likes: Faker::Number.number(digits: 3),
         user: user,
