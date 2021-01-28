@@ -32,7 +32,6 @@ comments = [
     "Told all my friends about this city. Going to be coming back soon with all of them!"
 ]
 
-
 puts "Seeding everything..."
 5.times do 
     user = User.create!(
