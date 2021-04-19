@@ -40,12 +40,10 @@ puts "Seeding everything..."
         email: Faker::Internet.email
     )
 
-
 5.times do 
     destination = Destination.create!(
         city: Faker::Address.city
     )
-
     
 5.times do 
     photo = Photo.create!(
